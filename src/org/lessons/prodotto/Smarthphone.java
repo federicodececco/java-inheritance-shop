@@ -7,8 +7,26 @@ public class Smarthphone extends Prodotto {
     private short rom;
 
     public Smarthphone(String nome, String marca, BigDecimal prezzo, int iva, long imeiCode, short rom) {
-        this.imeiCode=imeiCode;
-        this.rom=rom;
-        super(nome,marca,prezzo,iva);
+        this.imeiCode = imeiCode;
+        this.rom = rom;
+        super(nome, marca, prezzo, iva);
+    }
+    // getter
+
+    public long getImeiCode() {
+        return this.imeiCode;
+    }
+
+    public short getRom() {
+        return this.rom;
+    }
+
+    // setter
+    public void setImeiCode(long imeiCode) {
+        this.imeiCode = imeiCode;
+    }
+
+    public void setRom(short rom) {
+        this.rom = rom;
     }
 }
