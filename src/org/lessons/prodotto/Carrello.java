@@ -84,7 +84,7 @@ public class Carrello {
             else
                 tot.add(cart[i].getPrezzo());
         }
-        System.out.printf("prezzo finale: %s", tot.toString());
+        System.out.printf("prezzo finale: %s$\n", tot.toString());
         in.close();
 
     }
