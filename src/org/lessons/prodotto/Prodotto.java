@@ -61,7 +61,7 @@ public class Prodotto {
     public void setIva(int iva) {
         this.iva = iva;
     }
-
+    @Override
     public String toString() {
         String toFormat = "%s %s %s$ %d";
         return String.format(toFormat, nome, marca, prezzo.toString(), iva);
