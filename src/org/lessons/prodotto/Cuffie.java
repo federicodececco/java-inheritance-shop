@@ -32,6 +32,14 @@ public class Cuffie extends Prodotto {
     }
 
     @Override
+    public BigDecimal discountPrice() {
+        if (!wirless) {
+            return prezzo.multiply(BigDecimal.valueOf(0.93));
+        }
+        return prezzo.multiply(BigDecimal.valueOf(0.98));
+    }
+
+    @Override
     public String toString() {
         String toFormat = "%s %s %s$ %d wirless:%b %s";
         return String.format(toFormat, nome, marca, prezzo.toString(), iva, wirless, color);

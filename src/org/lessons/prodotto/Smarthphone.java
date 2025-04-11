@@ -31,6 +31,14 @@ public class Smarthphone extends Prodotto {
     }
 
     @Override
+    public BigDecimal discountPrice() {
+        if(rom<32){
+            return prezzo.multiply(BigDecimal.valueOf(0.95));
+        }
+        return prezzo.multiply(BigDecimal.valueOf(0.98));
+    }
+
+    @Override
     public String toString() {
         String toFormat = "%s %s %s$ %d %d %d";
         String test = String.format(toFormat, nome, marca, prezzo.toString(), iva, imeiCode, rom);

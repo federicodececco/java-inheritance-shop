@@ -25,6 +25,12 @@ public class Carrello {
         System.out.println("Inserire tipologia di prodotto (smartphone,televisore o cuffie): ");
         String prod = in.nextLine().toLowerCase();
 
+        System.out.println("Possiedi la carta fedeltà? (Y/N):");
+        boolean fedeltà;
+        if (in.nextLine().toLowerCase().equals("y"))
+            fedeltà = true;
+        else
+            fedeltà = false;
         switch (prod) {
             case "smartphone":
                 System.out.println("Inserire codice IMEI dello smarthphone:");

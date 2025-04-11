@@ -31,6 +31,14 @@ public class Televisore extends Prodotto {
     }
 
     @Override
+    public BigDecimal discountPrice() {
+        if (!smart) {
+            return prezzo.multiply(BigDecimal.valueOf(0.90));
+        }
+        return prezzo.multiply(BigDecimal.valueOf(0.98));
+    }
+
+    @Override
     public String toString() {
         String toFormat = "%s %s %s$ %d smart:%b %s";
         return String.format(toFormat, nome, marca, prezzo.toString(), iva, smart, String.valueOf(dimensions));
