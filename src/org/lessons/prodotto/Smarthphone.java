@@ -29,4 +29,11 @@ public class Smarthphone extends Prodotto {
     public void setRom(short rom) {
         this.rom = rom;
     }
+
+    @Override
+    public String toString() {
+        String toFormat = "%s %s %s$ %d %d %d";
+        String test = String.format(toFormat, nome, marca, prezzo.toString(), iva, imeiCode, rom);
+        return test;
+    }
 }

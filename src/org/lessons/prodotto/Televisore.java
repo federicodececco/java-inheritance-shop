@@ -29,4 +29,11 @@ public class Televisore extends Prodotto {
     public void setDimensions(double dimensions) {
         this.dimensions = dimensions;
     }
+
+    @Override
+    public String toString() {
+        String toFormat = "%s %s %s$ %d smart:%b %s";
+        return String.format(toFormat, nome, marca, prezzo.toString(), iva, smart, String.valueOf(dimensions));
+
+    }
 }

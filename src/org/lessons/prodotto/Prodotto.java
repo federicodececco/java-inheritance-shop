@@ -62,4 +62,13 @@ public class Prodotto {
         this.iva = iva;
     }
 
+    public String toString() {
+        String toFormat = "%s %s %s$ %d";
+        return String.format(toFormat, nome, marca, prezzo.toString(), iva);
+    }
+
+    public BigDecimal discountPrice() {
+        return prezzo.multiply(BigDecimal.valueOf(0.98));
+    }
+
 }

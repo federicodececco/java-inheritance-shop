@@ -31,4 +31,10 @@ public class Cuffie extends Prodotto {
         this.wirless = wirless;
     }
 
+    @Override
+    public String toString() {
+        String toFormat = "%s %s %s$ %d wirless:%b %s";
+        return String.format(toFormat, nome, marca, prezzo.toString(), iva, wirless, color);
+
+    }
 }
